@@ -1,5 +1,13 @@
 :root {
     --light-grayish-bg: hsl(0, 0%, 87%);
+    --black: hsl(0, 0%, 0%);
+    --lighter-black: hsl(0, 0%, 11%);
+    --dark-grey: hsl(0, 0%, 17%);
+    --grey: hsl(0, 0%, 28%);
+    --light-grey: hsl(0, 0%, 46%);
+    --lighter-grey:  hsl(0, 0%, 55%);
+
+    
    
 }
   
@@ -9,25 +17,31 @@
     box-sizing: border-box;
 }
 body {
-    font-family: "League Spartan", sans-serif;
-    font-size: 16px;
+    font-family: "Raleway", serif;
+    font-size: 14px;
     font-style: normal;
     width: 100%;
-    background-color: var(--light-grayish-bg);
+    background-color: var(--lighter-black);
 }
 header {
     margin: 0 auto;
     padding: 2rem 5rem;
     max-width: 1200px;
-    width: 100%;
+        width: 100%;
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
 nav ul {
     display: flex;
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem 3rem;
+    border-radius: 2rem;
 }
 nav ul li {
     margin-right: 2rem;
@@ -35,12 +49,13 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: #2b2928;
+    color: var(--light-grayish-bg);
+    font-size: 14px;
 }
 .nav-contact {
     color: var(--light-grayish-bg);
     text-decoration: none;
-    background-color: #2b2928;
+    
     padding: .75rem 1rem;
     border-radius: 1rem;
     transition: transform 0.3s ease-in-out;
@@ -49,14 +64,13 @@ nav ul li a {
     transform: scale(1.1);
 }
 .sidebar {
-    background-color: rgba (222, 222, 222, 0.1);
+    background-color: rgba(222, 222, 222, 0.1);
     width: 100%;
     height: 100vh;
     position: fixed;
     z-index: 1;
     top: 0;
     right: 0;
-    display: flex;
     flex-direction: column;
     padding: 4rem 2rem;
     align-items: center;
@@ -67,14 +81,134 @@ nav ul li a {
     margin-bottom: 2rem;
 }
 .sidebar i {
-    top: 2rem;
-    right: 2rem;
-    position: absolute;
     color: black;
     font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 4rem;
+    position: relative;
+    top: -1.5rem;
+    right: -32rem;
+}
+.sidebar .nav-contact i {
+    color: var(--light-grayish-bg);
+    font-size: 15px;
 }
 .menu-btn {
     cursor: pointer;
-    
+    font-size: 1.5rem;
+    display: none;
+}
+section {
+    margin: 0 auto;
+    padding: 1rem 5rem;
+    max-width: 1200px;
+    width: 100%;
+}
+.availability-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* background: rgba(255, 255, 255, 0.05); */
+    backdrop-filter: blur(10px);
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    border-radius: 50px;
+    padding: 16px 24px;
+    color: var(--light-grayish-bg);
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 200px;
+
+}
+.status-icon {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    background-color: hsl(152, 100%, 50%);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+    box-shadow:  0 0 10px #00ff88,
+                0 0 20px #00ff88,
+                0 0 30px #00ff88;
+}
+.status-icon::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    animation: ripple 2s ease-in-out infinite;
+}
+.status-icon::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
+    animation: ripple 2s ease-in-out infinite 0.5s;
 }
 
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow:  0 0 10px #00ff88,
+                0 0 20px #00ff88,
+                0 0 30px #00ff88;
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow:  0 0 15px #00ff88,
+                0 0 30px #00ff88,
+                0 0 45px #00ff88;
+    }
+}
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.availability-status:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+
+}
+.hero-section {
+    color: var(--light-grayish-bg);
+    margin-top: 2rem;
+}
+.welcome {
+    color: var(--lighter-grey);
+    font-size: 13px;
+    margin-bottom: 1rem;
+}
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+.hero-section h2 {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: var(--lighter-grey);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.info {
+    font-weight: 500;
+    margin-bottom: .5rem;
+    line-height: 1.5;
+}
