@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
+    <!--=============== REMIXICONS ===============-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +19,7 @@
     <header>
         <nav class="navbar">
             <a href="" class="nav-logo">
-                <img src="image/favicon.png" alt="">
+                <img src="image/favicon.png" alt="Logo">
             </a>
             
             <ul class="nav-list">
@@ -26,20 +27,30 @@
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
                 <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-            
             </ul>
-            <ul class="sidebar">
-                <i class="ri-close-large-fill" onclick="hideSidebar()"></i>
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                <li class="nav-item"><a href="#" class="nav-contact">Contact Me <i class="ri-arrow-right-up-line"></i></a></li>
+
+            <ul class="sidebar" id="sidebar">
+                <button class="close-btn" onclick="hideSidebar()">
+                    <i class="ri-close-large-fill"></i>
+                </button>
+                <li class="nav-item"><a href="#home" class="nav-link" onclick="hideSidebar()">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link" onclick="hideSidebar()">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link" onclick="hideSidebar()">Services</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link" onclick="hideSidebar()">Skills</a></li>
+                <li class="nav-item">
+                    <a href="#" class="nav-contact" onclick="hideSidebar()">
+                        Contact Me <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </li>
             </ul>
-            <a href="#" class="nav-contact">Contact Me <i class="ri-arrow-right-up-line"></i> </a>
-            <i class="ri-menu-line menu-btn" onclick="showSidebar()"></i>
+
+            <a href="#" class="nav-contact">Contact Me <i class="ri-arrow-right-up-line"></i></a>
+            <button class="menu-btn" onclick="showSidebar()">
+                <i class="ri-menu-line"></i>
+            </button>
         </nav>
     </header>
+
     <section id="home" class="home">
         <div class="availability-status">
             <div class="status-icon"></div>
@@ -49,9 +60,18 @@
             <p class="welcome">Welcome</p>
             <h1 class="title">Frontend Developer</h1>
             <h2 class="sub-title">Hi, I'm Onyeke Austine</h2>
-            <p class="info">I  specialize in crafting seamless web experiences using HTML, CSS, and JavaScript. Is your website struggling with clunky interfaces, slow load times, non-responsive designs, or inconsistent user flows? Are you facing high bounce rates, frustrated users, skeptical stakeholders, or a backlog of technical debt?</p>
-            <p  class="info">I can transform your frontend into a polished, user-friendly platform that drives engagement and results.</p>
+            <p class="info">I specialize in crafting seamless web experiences using HTML, CSS, and JavaScript. Is your website struggling with clunky interfaces, slow load times, non-responsive designs, or inconsistent user flows? Are you facing high bounce rates, frustrated users, skeptical stakeholders, or a backlog of technical debt?</p>
+            <p class="info">I can transform your frontend into a polished, user-friendly platform that drives engagement and results.</p>
         </div>
+        <div class="link-container">
+            <a href="https://github.com/dashboard" class="github-link" target="_blank"><i class="ri-github-fill"></i></a>
+            <a href="https://www.linkedin.com/in/austine-onyeke-7b452a158/" class="linkedin-link" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+            <a href="https://x.com/un_named____" class="x-link" target="_blank"><i class="ri-twitter-x-line"></i></a>
+            <a href="mailto:onyekeaustinofficial@gmail.com?subject=Hello" class="email-link"><i class="ri-mail-line"></i></a>
+            <a href="documents/Onyeke Austine CV(Tech).pdf" class="cv-link" target="_blank" download="Onyeke_Austine_CV(Tech).pdf"><i class="ri-file-download-line"></i></a>
+        </div>
+
+    
     </section>
 
     <script src="script.js"></script>
