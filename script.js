@@ -8,7 +8,8 @@ function hideSidebar() {
             sidebar.classList.add('active');
         }
 
-        
+
+        // Close sidebar when clicking outside
         document.addEventListener('click', function(event) {
             const sidebar = document.getElementById('sidebar');
             const menuBtn = document.querySelector('.menu-btn');

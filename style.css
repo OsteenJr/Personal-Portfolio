@@ -28,6 +28,13 @@ header {
             max-width: 1200px;
             width: 100%;
 }
+img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+}
 
 .navbar {
             display: flex;
@@ -279,6 +286,78 @@ section {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
+.project-section {
+    margin-top: 6rem;
+}
+.section-icon {
+    background-color: hsla(152, 100%, 50%, 0.03);
+    width: auto;
+    color: #50f4a8;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 0.7rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: none;
+}
+.section-icon i {
+    margin-right: .5rem;
+}
+.section-title {
+    color: var(--light-grayish-bg);
+    font-size: 1.9rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.section-desc {
+    color: var(--lighter-grey);
+    font-size: 14px;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.project-card {
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 1rem;
+}
+
+.project-card img {
+    border-radius: 1rem;
+    filter: grayscale(100%);
+   transition: transform 0.5s ease, filter 0.5s ease;
+   margin-bottom: 2rem;
+}
+.project-card img:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+.project-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--light-grayish-bg);
+    margin-bottom: 1rem;
+}
+.project-desc {
+    color: var(--lighter-grey);
+    font-size: .8rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.project-link {
+    text-decoration: none;
+    color: #50f4a8;
+    font-size: .8rem;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
             header {
