@@ -109,6 +109,7 @@ img {
             padding: 4rem 2rem;
             align-items: center;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             display: flex;
             border-radius: 0;
             transition: right 0.3s ease-in-out;
