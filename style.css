@@ -482,6 +482,46 @@ margin-bottom: 1rem;
     color: var(--light-grayish-bg);
 }
 
+/* ABOUT PAGE */
+.about-page {
+    margin-top: 2rem;
+}
+.about-container {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 4rem 2rem;
+}
+.about-page h1,
+.about-page h2 {
+    font-size: 2.5rem;
+    color: var(--light-grayish-bg);
+    margin-bottom: 1rem;
+    font-family: raleway, serif;
+}
+.about-page p {
+    color: var(--lighter-grey);
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 2rem;
+    font-family: raleway, serif;
+}
+.about-content {
+    margin-bottom: 1rem;
+}
+.about-content .about-links-container p {
+    margin: 0.5rem 0;
+    color: var(--light-grayish-bg);
+}
+.about-links-container a{
+    color: #50f4a8;
+    text-decoration: none;
+}
+.about-links-container a:hover {
+    text-decoration: underline;
+}
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
     header {
