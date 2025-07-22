@@ -1,164 +1,330 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="100x100" href="image/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="100x100"
+      href="image/favicon.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <!--=============== REMIXICONS ===============-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" referrerpolicy="no-referrer"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Onyeke Austine | Web Developer</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <a href="index.html" class="nav-logo">
-                <img src="image/favicon.png" alt="Logo">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+          <img src="image/favicon.png" alt="Logo" />
+        </a>
+
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+        </ul>
+
+        <ul class="sidebar" id="sidebar">
+          <button class="close-btn" onclick="hideSidebar()">
+            <i class="ri-close-large-fill"></i>
+          </button>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" onclick="hideSidebar()"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" onclick="hideSidebar()"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link" onclick="hideSidebar()"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link" onclick="hideSidebar()"
+              >Skills</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-contact" onclick="hideSidebar()">
+              Contact Me <i class="ri-arrow-right-up-line"></i>
             </a>
-            
-            <ul class="nav-list">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-            </ul>
+          </li>
+        </ul>
 
-            <ul class="sidebar" id="sidebar">
-                <button class="close-btn" onclick="hideSidebar()">
-                    <i class="ri-close-large-fill"></i>
-                </button>
-                <li class="nav-item"><a href="index.html" class="nav-link" onclick="hideSidebar()">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link" onclick="hideSidebar()">About</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link" onclick="hideSidebar()">Services</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link" onclick="hideSidebar()">Skills</a></li>
-                <li class="nav-item">
-                    <a href="#" class="nav-contact" onclick="hideSidebar()">
-                        Contact Me <i class="ri-arrow-right-up-line"></i>
-                    </a>
-                </li>
-            </ul>
-
-            <a href="#" class="nav-contact">Contact Me <i class="ri-arrow-right-up-line"></i></a>
-            <button class="menu-btn" onclick="showSidebar()">
-                <i class="ri-menu-line"></i>
-            </button>
-        </nav>
+        <a href="#" class="nav-contact"
+          >Contact Me <i class="ri-arrow-right-up-line"></i
+        ></a>
+        <button class="menu-btn" onclick="showSidebar()">
+          <i class="ri-menu-line"></i>
+        </button>
+      </nav>
     </header>
 
     <section id="home" class="home">
-        <div class="availability-status">
-            <div class="status-icon"></div>
-            <p class="status-text">Available to work</p>
-        </div>
-        <div class="hero-section">
-            <p class="welcome">Welcome</p>
-            <h1 class="title">Frontend Developer</h1>
-            <h2 class="sub-title">Hi, I'm Austine</h2>
-            <p class="info">I specialize in crafting seamless web experiences. Is your website struggling with clunky interfaces, slow load times, non-responsive designs, or inconsistent user flows? Are you facing high bounce rates, frustrated users, skeptical stakeholders, or a backlog of technical debt?</p>
-            <p class="info">I can transform your frontend into a polished, user-friendly platform that drives engagement and results.</p>
-        </div>
-        <div class="link-container">
-            <a href="https://github.com/dashboard" class="github-link" target="_blank"><i class="ri-github-fill"></i></a>
-            <a href="https://www.linkedin.com/in/austine-onyeke-7b452a158/" class="linkedin-link" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
-            <a href="https://x.com/un_named____" class="x-link" target="_blank"><i class="ri-twitter-x-line"></i></a>
-            <a href="mailto:onyekeaustinofficial@gmail.com?subject=Hello" class="email-link"><i class="ri-mail-line"></i></a>
-            <a href="documents/Onyeke Austine CV(Tech).pdf" class="cv-link" target="_blank" download="Onyeke_Austine_CV(Tech).pdf"><i class="ri-file-download-line"></i></a>
-        </div>
-
-    
+      <div class="availability-status">
+        <div class="status-icon"></div>
+        <p class="status-text">Available to work</p>
+      </div>
+      <div class="hero-section">
+        <p class="welcome">Welcome</p>
+        <h1 class="title">Frontend Developer</h1>
+        <h2 class="sub-title">Hi, I'm Austine</h2>
+        <p class="info">
+          I specialize in crafting seamless web experiences. Is your website
+          struggling with clunky interfaces, slow load times, non-responsive
+          designs, or inconsistent user flows? Are you facing high bounce rates,
+          frustrated users, skeptical stakeholders, or a backlog of technical
+          debt?
+        </p>
+        <p class="info">
+          I can transform your frontend into a polished, user-friendly platform
+          that drives engagement and results.
+        </p>
+      </div>
+      <div class="link-container">
+        <a
+          href="https://github.com/dashboard"
+          class="github-link"
+          target="_blank"
+          ><i class="ri-github-fill"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/austine-onyeke-7b452a158/"
+          class="linkedin-link"
+          target="_blank"
+          ><i class="ri-linkedin-box-fill"></i
+        ></a>
+        <a href="https://x.com/un_named____" class="x-link" target="_blank"
+          ><i class="ri-twitter-x-line"></i
+        ></a>
+        <a
+          href="mailto:onyekeaustinofficial@gmail.com?subject=Hello"
+          class="email-link"
+          ><i class="ri-mail-line"></i
+        ></a>
+        <a
+          href="documents/Onyeke Austine CV(Tech).pdf"
+          class="cv-link"
+          target="_blank"
+          download="Onyeke_Austine_CV(Tech).pdf"
+          ><i class="ri-file-download-line"></i
+        ></a>
+      </div>
     </section>
     <section class="project-section">
-        <a class="section-icon"><i class="ri-briefcase-line"></i>Projects</a>
-        <h2 class="section-title">Brick by Brick</h2>
-        <p class="section-desc">
-        Each project is a landmark on the road of becoming—proof not just of progress, but of persistence, curiosity, and creative evolution. Through every concept explored, every challenge faced, and every solution built, I’ve grown—not only in skill, but in mindset. This is more than just a collection of work; it’s a visual diary of how I think, how I build, and how I turn vision into reality, one step at a time.        </p>
-        <div class="project-container">
-            <div class="project-card">
-                <img src="image/Dreamhouse.png" alt="Portfolio Project">
-                <h3 class="project-title">Dreamhouse: Transform your vision of a home into reality</h3>
-                <p class="project-desc">This project combines intuitive UI, responsive design, and location-based search to help users discover properties with confidence.</p>
-                <a href="https://dreamhouseng.netlify.app/" class="project-link" target="_blank">View Project <i class="ri-arrow-right-line"></i></a>
-            </div>
-             <div class="project-card">
-                <img src="image/Ableton.png" alt="Portfolio Project">
-                <h3 class="project-title">Ableton: A Front-End Rebuild of an Iconic Music Brand</h3>
-                <p class="project-desc">This project is a front-end recreation of the official Ableton website—known for its minimalist design, clean layout, and creative storytelling.</p>
-                <a href="index.html" class="project-link" target="_blank">View Project <i class="ri-arrow-right-line"></i></a>
-            </div>
-             <div class="project-card">
-                <img src="image/Vibez360.png" alt="Portfolio Project">
-                <h3 class="project-title">Vibez360Waves: Where Grooming Meets Culture</h3>
-                <p class="project-desc">Vibez360Waves is a full-stack eCommerce and lifestyle website built for a modern men’s haircare brand rooted in wave culture.</p>
-                <a href="https://vibez360waves.netlify.app/" class="project-link" target="_blank">View Project <i class="ri-arrow-right-line"></i></a>
-            </div>
-             <div class="project-card">
-                <img src="image/Heis.png" alt="Portfolio Project">
-                <h3 class="project-title">Heis Album Tracklist: Rema Experience</h3>
-                <p class="project-desc">A bold, immersive landing page for Rema’s music drop, "HEIS." Designed with a gritty, high-contrast visual aesthetic that fuses culture, streetwear, and sound. It is a project from Frontend Practice.</p>
-                <a href="https://heisalbum.netlify.app/" class="project-link" target="_blank">View Project <i class="ri-arrow-right-line"></i></a>
-            </div>
-             <div class="project-card">
-                <img src="image/Zikoko.png" alt="Portfolio Project">
-                <h3 class="project-title">Zikoko Love Life Concert</h3>
-                <p class="project-desc">Built with a clean, modern UI and an emphasis on clarity and conversion, the site lets users easily navigate between events, ticket options, and event info.</p>
-                <a href="https://zikokooo.netlify.app/" class="project-link" target="_blank">View Project <i class="ri-arrow-right-line"></i></a>
-            </div>
-             <div class="project-card">
-                <img src="image/Oh Studio.png" alt="Portfolio Project">
-                <h3 class="project-title">Oh Studio — Global Design Partner.</h3>
-                <p class="project-desc">A sleek, minimalist portfolio site for Oh Studio, a brand and product designer working with clients across the globe. It is a project from Frontend Practice.</p>
-                <a href="" class="project-link" target="_blank">View Project <i class="ri-arrow-right-line"></i></a>
-            </div>
-            
+      <a class="section-icon"><i class="ri-briefcase-line"></i>Projects</a>
+      <h2 class="section-title">Brick by Brick</h2>
+      <p class="section-desc">
+        Each project is a landmark on the road of becoming—proof not just of
+        progress, but of persistence, curiosity, and creative evolution. Through
+        every concept explored, every challenge faced, and every solution built,
+        I’ve grown—not only in skill, but in mindset. This is more than just a
+        collection of work; it’s a visual diary of how I think, how I build, and
+        how I turn vision into reality, one step at a time.
+      </p>
+      <div class="project-container">
+        <div class="project-card">
+          <img src="image/Dreamhouse.png" alt="Portfolio Project" />
+          <h3 class="project-title">
+            Dreamhouse: Transform your vision of a home into reality
+          </h3>
+          <p class="project-desc">
+            This project combines intuitive UI, responsive design, and
+            location-based search to help users discover properties with
+            confidence.
+          </p>
+          <a
+            href="https://dreamhouseng.netlify.app/"
+            class="project-link"
+            target="_blank"
+            >View Project <i class="ri-arrow-right-line"></i
+          ></a>
         </div>
-        <a href="#" class="view-more">View More</a>
+        <div class="project-card">
+          <img src="image/Ableton.png" alt="Portfolio Project" />
+          <h3 class="project-title">
+            Ableton: A Front-End Rebuild of an Iconic Music Brand
+          </h3>
+          <p class="project-desc">
+            This project is a front-end recreation of the official Ableton
+            website—known for its minimalist design, clean layout, and creative
+            storytelling.
+          </p>
+          <a href="#" class="project-link" target="_blank"
+            >View Project <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+        <div class="project-card">
+          <img src="image/Vibez360.png" alt="Portfolio Project" />
+          <h3 class="project-title">
+            Vibez360Waves: Where Grooming Meets Culture
+          </h3>
+          <p class="project-desc">
+            Vibez360Waves is a full-stack eCommerce and lifestyle website built
+            for a modern men’s haircare brand rooted in wave culture.
+          </p>
+          <a
+            href="https://vibez360waves.netlify.app/"
+            class="project-link"
+            target="_blank"
+            >View Project <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+        <div class="project-card">
+          <img src="image/Heis.png" alt="Portfolio Project" />
+          <h3 class="project-title">Heis Album Tracklist: Rema Experience</h3>
+          <p class="project-desc">
+            A bold, immersive landing page for Rema’s music drop, "HEIS."
+            Designed with a gritty, high-contrast visual aesthetic that fuses
+            culture, streetwear, and sound. It is a project from Frontend
+            Practice.
+          </p>
+          <a
+            href="https://heisalbum.netlify.app/"
+            class="project-link"
+            target="_blank"
+            >View Project <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+        <div class="project-card">
+          <img src="image/Zikoko.png" alt="Portfolio Project" />
+          <h3 class="project-title">Zikoko Love Life Concert</h3>
+          <p class="project-desc">
+            Built with a clean, modern UI and an emphasis on clarity and
+            conversion, the site lets users easily navigate between events,
+            ticket options, and event info.
+          </p>
+          <a
+            href="https://zikokooo.netlify.app/"
+            class="project-link"
+            target="_blank"
+            >View Project <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+        <div class="project-card">
+          <img src="image/Oh Studio.png" alt="Portfolio Project" />
+          <h3 class="project-title">Oh Studio — Global Design Partner.</h3>
+          <p class="project-desc">
+            A sleek, minimalist portfolio site for Oh Studio, a brand and
+            product designer working with clients across the globe. It is a
+            project from Frontend Practice.
+          </p>
+          <a href="#" class="project-link" target="_blank"
+            >View Project <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+      </div>
+      <a
+        href="https://github.com/OsteenJr?tab=repositories"
+        class="view-more"
+        target="_blank"
+        >Discover More Work</a
+      >
     </section>
     <footer>
-        <div class="footer-content">
-            <div class="footer-name">
-                <div class="footer-details">
-                    <h2><i class="ri-bubble-chart-fill"></i> Austine</h2>
-                <p>A dedicated problem solver who thrives on learning and building</p>
-                </div>
-                <div class="footer-socials">
-                    <div class="footer-social-links">
-                        <a href="https://github.com/dashboard" class="github-link" target="_blank"><i class="ri-github-fill"></i></a>
-                        <a href="https://www.linkedin.com/in/austine-onyeke-7b452a158/" class="linkedin-link" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
-                        <a href="https://x.com/un_named____" class="x-link" target="_blank"><i class="ri-twitter-x-line"></i></a>
-                        <a href="mailto:onyekeaustinofficial@gmail.com?subject=Hello" class="email-link"><i class="ri-mail-line"></i></a>
-                        <a href="documents/Onyeke Austine CV(Tech).pdf" class="cv-link" target="_blank" download="Onyeke_Austine_CV(Tech).pdf"><i class="ri-file-download-line"></i></a>
-                    </div>
-                    <p>&copy; 2025 Onyeke Austine. All rights reserved.</p>
-                </div>
+      <div class="footer-content">
+        <div class="footer-name">
+          <div class="footer-details">
+            <h2><i class="ri-bubble-chart-fill"></i> Austine</h2>
+            <p>
+              A dedicated problem solver who thrives on learning and building
+            </p>
+          </div>
+          <div class="footer-socials">
+            <div class="footer-social-links">
+              <a
+                href="https://github.com/dashboard"
+                class="github-link"
+                target="_blank"
+                ><i class="ri-github-fill"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/austine-onyeke-7b452a158/"
+                class="linkedin-link"
+                target="_blank"
+                ><i class="ri-linkedin-box-fill"></i
+              ></a>
+              <a
+                href="https://x.com/un_named____"
+                class="x-link"
+                target="_blank"
+                ><i class="ri-twitter-x-line"></i
+              ></a>
+              <a
+                href="mailto:onyekeaustinofficial@gmail.com?subject=Hello"
+                class="email-link"
+                ><i class="ri-mail-line"></i
+              ></a>
+              <a
+                href="documents/Onyeke Austine CV(Tech).pdf"
+                class="cv-link"
+                target="_blank"
+                download="Onyeke_Austine_CV(Tech).pdf"
+                ><i class="ri-file-download-line"></i
+              ></a>
             </div>
-            
-            <div class="footer-links">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="documents/Onyeke_Austine_CV(Tech).pdf" target="_blank" download="Onyeke_Austine_CV(Tech).pdf">Download CV</a></li>
-                    <li><a href="https://onyekeaustine.com/blog" target="_blank">Blog</a></li>
-                </ul>
-            
-            </div>
-             
-            
-            
+            <p>&copy; 2025 Onyeke Austine. All rights reserved.</p>
+          </div>
         </div>
+
+        <div class="footer-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a
+                href="documents/Onyeke_Austine_CV(Tech).pdf"
+                target="_blank"
+                download="Onyeke_Austine_CV(Tech).pdf"
+                >Download CV</a
+              >
+            </li>
+            <li>
+              <a href="https://onyekeaustine.com/blog" target="_blank">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-</html> 
+  </body>
+</html>
