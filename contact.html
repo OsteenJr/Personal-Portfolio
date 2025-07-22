@@ -28,7 +28,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Onyeke Austine | About</title>
+    <title>Onyeke Austine | Contact</title>
   </head>
   <body>
     <header>
@@ -84,84 +84,95 @@
         </button>
       </nav>
     </header>
-
     <main>
-      <section class="about-page" id="aboutPage">
-        <div class="about-container">
-          <div class="about-content">
-            <h1 class="about-title">About Me</h1>
-            <img src="image/Passport.JPG" alt="My Image" class="about-image" />
-            <p class="about-text">
-              Hey, I'm Onyeke Austine, a frontend developer who turns pixel into
-              purpose. I build websites that don't just work but works
-              beautifully. With a passion for clean code and a keen eye for
-              design, I create digital experiences that are both functional and
-              visually appealing.
-              <br /><br />
-              Based in Nigeria, I craft sleek, responsive interfaces that
-              breathe life into brands and ideas. My journey into code wasn't
-              traditional, it was fueled by curiosity, late-night YouTube
-              binges, and the thrill of seeing my first button actually click.
-              What started as a hobby evolved into a calling: creating intuitive
-              web experiences that users don't just navigate, but actually
-              enjoy.
-              <br /><br />
-              I'm all about the balance. Clean code with creative soul,
-              structure with flexibility. Whether I'm sketching out UI
-              wireframes, animating subtle hover effects, or fine-tuning a
-              mobile layout, I'm in my zone when building things that make
-              people say, “Whoa, that's smooth.
-            </p>
+      <section id="contact" class="contact-page">
+        <div class="contact-container">
+          <h1 class="contact-title">Let’s Build Something Amazing</h1>
+          <p class="contact-intro">
+            I’m available to work on your next web project, whether it’s a
+            responsive portfolio, an eCommerce platform, or a dynamic web app.
+            Reach out to discuss how I can bring your vision to life with clean
+            code and creative design.
+          </p>
+          <div class="contact-form-container">
+            <h2 class="contact-subtitle">Send Me a Message</h2>
+            <form
+              action="https://formspree.io/f/xzzvezon"
+              method="post"
+              class="contact-form"
+              id="contactForm"
+            >
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Your Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Your Email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  placeholder="Subject"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="Your Message"
+                  rows="7"
+                ></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                Send Message <i class="ri-send-plane-fill"></i>
+              </button>
+            </form>
           </div>
-          <div class="about-content">
-            <h2 class="about-subtitle">How It Started / How It's Going</h2>
-            <p class="about-text">
-              My background blends both design and development. The artistic eye
-              from visual storytelling, and the technical chops from front-end
-              engineering. Over time, I found my sweet spot in frontend
-              development: where logic meets aesthetics.
-              <br /><br />
-              I've worked on projects ranging from minimalist eCommerce pages to
-              full-blown multi-page apps. I've learned through freelancing,
-              courses, and community, not from climbing a corporate ladder, but
-              from building real things that solve real problems.
-            </p>
-          </div>
-          <div class="about-content">
-            <h2 class="about-subtitle">My Approach</h2>
-            <p class="about-text">
-              I believe the web should be accessible, fast, and just plain
-              beautiful. I'm obsessed with UX details most people overlook the
-              snappy transitions, the way a layout breathes, the satisfying flow
-              from click to checkout.
-              <br /><br />
-              Modern frameworks like React are my jam, but I don't get caught up
-              in hype. I focus on what works, what's maintainable, and what
-              delivers the best experience for the end user. Every line of code
-              is a brick in a digital home and I build with intention.
-            </p>
-          </div>
-          <div class="about-content">
-            <h2 class="about-subtitle">Let's Keep Going</h2>
-
-            <div class="about-links-container">
-              <p class="about-text">Curious to see what I've built?</p>
+          <div class="contact-info">
+            <h2 class="contact-subtitle">Other Ways to Connect</h2>
+            <div class="contact-links">
               <a
-                href="https://github.com/OsteenJr?tab=repositories"
-                class="about-link"
+                href="mailto:onyekeaustinofficial@gmail.com?subject=Hello"
+                class="contact-link"
+                ><i class="ri-mail-line"></i> onyekeaustinofficial@gmail.com</a
               >
-                👉 Check out my GitHub</a
+              <a
+                href="https://github.com/yourusername"
+                class="contact-link"
+                target="_blank"
+                ><i class="ri-github-fill"></i> GitHub</a
               >
-            </div>
-            <div class="about-links-container">
-              <p class="about-text">Need a dev to bring your idea to life?</p>
-              <a href="services.html" class="about-link">
-                👉 Explore my Services</a
+              <a
+                href="https://www.linkedin.com/in/austine-onyeke-7b452a158/"
+                class="contact-link"
+                target="_blank"
+                ><i class="ri-linkedin-box-fill"></i> LinkedIn</a
               >
-            </div>
-            <div class="about-links-container">
-              <p class="about-text">Want to connect or say hi?</p>
-              <a href="contact.html" class="about-link"> 👉 Contact Me</a>
+              <a
+                href="https://x.com/un_named____"
+                class="contact-link"
+                target="_blank"
+                ><i class="ri-twitter-x-line"></i> X</a
+              >
             </div>
           </div>
         </div>
@@ -220,7 +231,11 @@
             <li><a href="services.html">Services</a></li>
           </ul>
           <ul>
-            <li><a href="https://github.com/OsteenJr?tab=repositories">Projects</a></li>
+            <li>
+              <a href="https://github.com/OsteenJr?tab=repositories"
+                >Projects</a
+              >
+            </li>
             <li><a href="contact.html">Contact</a></li>
             <li>
               <a
